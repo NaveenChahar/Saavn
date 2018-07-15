@@ -1,0 +1,272 @@
+body{
+    box-sizing: border-box;
+}
+a:hover{
+    text-decoration: none;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clearfix{
+    clear: both;
+    content: "";
+    display: block;
+}
+p{
+    margin: 0%;
+}
+.fixed-top{
+    position: fixed;
+    top: 0px;
+    z-index: 200;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+#topbar{
+    border-bottom: 1px solid #dee2e6;
+
+}
+#searchbar{
+    background-color: #f8f9fa;
+    height: 80px;
+    width: 100%;
+
+}
+#searchbar ul{
+    padding: 15px 20px;
+}
+#regional_bar{
+    height: 1.5%;
+}
+#regional_bar ul li{
+    padding-left: 3%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+#regional_bar ul li a{
+    color: #a9a9a9;
+}
+#regional_bar ul li a:hover{
+    color: black;
+    border-bottom: none;
+}
+
+.card1{
+    padding: 5% 5%;
+    text-align: left;
+}
+.card1_img{
+    border-radius: 42px;
+
+}
+#stations{
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    height: 115px;
+    background-color: #3e3e3e;
+}
+#stations ul li{
+    height: 95px;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+
+}
+#stations .list li a:hover p{
+    color: black;
+}
+#main_content{
+    position: relative;
+}
+
+#left_side{
+    width: 250px;
+    height: auto;
+    position: absolute;
+    z-index: 5;
+    left: 0px;
+}
+#left_side ul li{
+    list-style: none;
+    display: list-item;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.play{
+    width: 15%;
+    text-align: center;
+    padding-top: 14px;
+    color: #ccc;
+    font-size:11px;
+}
+
+#right_side{
+    width: 250px;
+    position: absolute;
+    z-index: 5;
+    right: 0px;
+    top: 0px;
+}
+
+#right_side a button{
+    padding: 1px 12px 3px 12px;
+    border-radius: 35px;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: white;
+    border-color: #a9a9a9;
+    color: #a9a9a9;
+    vertical-align: top;
+    margin-top: 3px;
+}
+#right_side_images{
+    margin-top: 20px;
+}
+#right_side_images img{
+    height: 105px;
+    width: 105px;
+    border-radius: 2px;
+}
+#right_side_images h3{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    padding-top: 3px;
+    margin: 0%;
+    color: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+}
+#right_side_images div{
+    width: 125px;
+    margin: 0%;
+    padding-right: 20px;
+    margin-bottom: 20px;
+
+}
+#right_side_images p{
+    color: #a9a9a9;
+    font-size: 14px;
+}
+
+#centre{
+    width: 100%;
+    padding: 0px 297px 0px 297px;
+}
+#centre a button{
+    padding: 1px 12px 3px 12px;
+    border-radius: 35px;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: white;
+    border-color: #a9a9a9;
+    color: #a9a9a9;
+    vertical-align: top;
+    margin-top: 3px;
+}
+#centre_images{
+    margin-top: 20px;
+    width: auto;
+}
+#centre_images a{
+    width: 20%;
+}
+#centre_images div{
+    width: 100%;
+    margin: 0%;
+    padding-right: 20px;
+    margin-bottom: 40px;
+
+}
+#centre_images h3{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    padding-top: 3px;
+    margin: 0%;
+    color: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+}
+#centre_images p{
+    color: black;
+    font-size: 14px;
+}
+#centre_images div img{
+    width: 100%;
+    border-radius: 2px;
+}
+
+#footer{
+    width: 96%;
+    margin: 0px auto 80px auto;
+}
+#footer a div{
+    background-color: #4267b2;
+    color: white;
+    padding: 0px 0px 0px 0px;
+    width: 46px;
+    height: 19px;
+    border-radius: 3px;
+    margin: 0%;
+    display: inline-block;
+    margin-top: 1px;
+    margin-right: 5px;
+}
+.footer_navs{
+    width: 14.28%;
+}
+.footer_navs ul{
+    margin:15px 0px 0px 0px;
+    padding: 0%;
+}
+.footer_navs ul li{
+    text-decoration: none;
+    list-style: none;
+    display: list-item;
+    line-height: 1.2;
+    margin: 1px 0px;
+}
+.footer_navs ul li a{
+    color: #a9a9a9;
+    font-size: 13px;
+    font-weight: 400;
+}
+.footer_navs p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #a9a9a9;
+
+}
+
+
+
+@media only screen and (max-width:1500px){
+    #centre_images a{
+        width: 25%;
+    }
+    #stations ul{
+        width:85%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    #stations ul li{
+        padding: 0px 35px 0px 35px;
+    }
+}
+@media only screen and (max-width:1200px){
+    #centre_images a{
+        width:33.33%;
+    }
+}

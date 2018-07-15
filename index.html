@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saavn</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="saavn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="container">
+
+
+    <div id="header">
+        <div class="fixed-top" style="height: 10%">
+        <nav id="topbar" class="navbar navbar-expand-lg navbar-light bg-light" style="">
+            <a class="navbar-brand" href="#"><img width="180px" src="resources/solid-saavn.svg"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Song Map</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Browse
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Featured Playlist</a>
+                            <a class="dropdown-item" href="#">Top Artists</a>
+                            <a class="dropdown-item" href="#">New Releases</a>
+                            <a class="dropdown-item" href="#">Weekly Top 15</a>
+                            <a class="dropdown-item" href="#">All Albums</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">People</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Surprise Me</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">My Music <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                    <a class="nav-link" href="#">Radio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Bookmark Saavn</a> //use js
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Saavn for iOS</a>
+                            <a class="dropdown-item" href="#">Saavn for Android</a>
+                            <a class="dropdown-item" href="#">Saavn for Windows</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Jobs</a>
+                            <a class="dropdown-item" href="#">Advertise</a>
+                            <a class="dropdown-item" href="#">Press</a>
+                            <a class="dropdown-item" href="#">Help & Support</a>
+                            <a class="dropdown-item" href="#">Contact Us</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><button type="button" style="padding: 4px 7px 4px 7px;border-radius: 35px;font-size: 12px;font-weight: 600" class="btn btn-success">GO PRO</button>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="searchbar">
+            <ul class="list">
+                <li style="width: 80%"><form style="width: 100%!important;margin-right: 0px!important;" class="form-inline my-2 my-lg-0">
+                    <input style="height: 50px;width: inherit;border-radius: 100px" class="form-control mr-sm-2" type="search" placeholder="Search for Songs" aria-label="Search"></form></li>
+                <li style="padding-top: 10px;padding-right: 15px;padding-left: 10px">or</li>
+                <li style="padding-top: 3px;width: 16%"><button style="width: 100%;border-radius: 80px;height: 45px" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div style="margin-top: 150px;width: 95%;margin-left: auto;margin-right: auto">
+            <div id="regional_bar">
+                <ul class="list" style="border-bottom: 1px solid #dee2e6">
+                    <li style="padding-left: 6%"><a href="#">Hindi</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Tamil</a></li>
+                    <li><a href="#">Telugu</a></li>
+                    <li><a href="#">Punjabi</a></li>
+                    <li><a href="#">Marathi</a></li>
+                    <li><a href="#">Gujrati</a></li>
+                    <li><a href="#">Bengali</a></li>
+                    <li><a href="#">Kannada</a></li>
+                    <li><a href="#">Bhojpuri</a></li>
+                    <li><a href="#">Malayalam</a></li>
+                    <li><a href="#">Urdu</a></li>
+                    <li><a href="#">Rajasthani</a></li>
+                    <li><a href="#">Odia</a></li>
+                    <li><a href="#">Assamese</a></li>
+                </ul>
+            </div>
+            <div id="stations">
+                <ul class="list" style="padding-top: 10px">
+                    <li>
+                    <span>
+                        <div style="padding-right: 0px;padding-top: 15px;width: 148.86px">
+                            <h1 style="color: white;font-size: 18px">Radio</h1>
+                            <p style="color: gainsboro;font-size: 13px">Pick a mood,song,or artist<br>We'll play the perfect mix!</p>
+
+                        </div>
+                    </span>
+                    </li>
+                    <li>
+                        <a href="#" style="text-decoration: none;">
+                        <div class="card" style="width: 65px;height: 65px;background-color: transparent;border: transparent">
+
+                            <img class="card-img-top card1_img" src="https://c.saavncdn.com/editorial/MehfilEGhazal_80x80.jpg" alt="Card image cap">
+
+                            <div class="card-body card1">
+                            <p class="card-text" style="color: white;width: 75px;font-size: 13px">Kailash Kher</p>
+
+                            </div>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="card" style="width: 65px;height: 65px;background-color: transparent;border: transparent">
+
+                            <img class="card-img-top card1_img" src="https://c.saavncdn.com/artists/Shankar_Mahadevan_80x80.jpg" alt="Card image cap">
+
+                            <div class="card-body card1">
+                                <p class="card-text" style="color: white;width: 75px;font-size: 13px">Kailash Kher</p>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card" style="width: 65px;height: 65px;background-color: transparent;border: transparent">
+
+                            <img class="card-img-top card1_img" src="https://c.saavncdn.com/artists/Jagjit_Singh_80x80.jpg" alt="Card image cap">
+
+                            <div class="card-body card1">
+                                <p class="card-text" style="color: white;width: 75px;font-size: 13px">Kailash Kher</p>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card" style="width: 65px;height: 65px;background-color: transparent;border: transparent">
+
+                            <img class="card-img-top card1_img" src="https://c.saavncdn.com/artists/Kishore_Kumar_80x80.jpg" alt="Card image cap">
+
+                            <div class="card-body card1">
+                                <p class="card-text" style="color: white;width: 75px;font-size: 13px">Kailash Kher</p>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card" style="width: 65px;height: 65px;background-color: transparent;border: transparent">
+
+                            <img class="card-img-top card1_img" src="https://c.saavncdn.com/editorial/It'sAParty_80x80.jpg" alt="Card image cap">
+
+                            <div class="card-body card1">
+                                <p class="card-text" style="color: white;width: 75px;font-size: 13px">Kailash Kher</p>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card" style="width: 65px;height: 65px;background-color: transparent;border: transparent">
+
+                            <img class="card-img-top card1_img" src="https://c.saavncdn.com/editorial/90sNostalgia_80x80.jpg" alt="Card image cap">
+
+                            <div class="card-body card1">
+                                <p class="card-text" style="color: white;width: 75px;font-size: 13px">Kailash Kher</p>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card" style="width: 65px;height: 65px;background-color: transparent;border: transparent">
+
+                            <img class="card-img-top card1_img" src="https://c.saavncdn.com/editorial/HappyTunes_80x80.jpg" alt="Card image cap">
+
+                            <div class="card-body card1">
+                                <p class="card-text" style="color: white;width: 75px;font-size: 13px">Kailash Kher</p>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card" style="width: 65px;height: 65px;background-color: transparent;border: transparent">
+
+                            <img class="card-img-top card1_img" src="https://c.saavncdn.com/artists/Arijit_Singh_80x80.jpg" alt="Card image cap">
+
+                            <div class="card-body card1">
+                                <p class="card-text" style="color: white;width: 75px;font-size: 13px">Kailash Kher</p>
+
+                            </div>
+                        </div>
+                    </li>
+                    <span><button style="width: 100%;border-radius: 80px;height: 45px" class="btn btn-outline-success my-2 my-sm-0" type="submit">More Stations</button></span>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="main_content" style="width: 93%;margin: auto;height: auto;">
+
+        <div id="left_side">
+            <div>
+                <span style="font-size: 19px;padding-right: 5px;color: #a9a9a9">WEEKLY TOP 15</span>
+                <a style="padding-bottom: 5px"><button type="button" style="padding: 2px 12px 4px 12px;border-radius: 35px;
+                    font-size: 11px;font-weight: 700" class="btn btn-success">PLAY ALL</button>
+                </a>
+            </div>
+            <ul style="padding-left: 10px;padding-top: 20px;padding-bottom: 30px">
+                <li>
+                <a style="display: flex;" href="#">
+                    <div style="margin-top: 25px;width: 15%;text-align: center;color: #ccc;font-size:12px">1</div>
+                    <div>
+                        <img style="margin-right:9px;" src="https://c.saavncdn.com/957/Veere-Di-Wedding-Hindi-2018-20180531-80x80.jpg">
+                    </div>
+                    <div>
+                        <span style="font-size: 14px;line-height: 1.5;color: #000;">Tareefan</span>
+                        <p style="font-size: 14px;color: #ccc;">Veere di wedding</p>
+                        <p style="font-size: 11px;color: #ccc;">@Zee Music Co.</p>
+                    </div>
+                </a>
+                </li>
+                <li>
+                    <a style="display: flex;" href="#">
+                            <div class="play">2</div>
+                            <div>
+                                <span style="font-size: 14px;line-height: 1.5;color: #000;">Bom Diggy</span>
+                                <p style="font-size: 14px;color: #ccc;">Bom Diggy</p>
+                            </div>
+                    </a>
+                </li>
+                <li>
+                        <a style="display: flex;" href="#">
+                                <div class="play">3</div>
+                                <div>
+                                    <span style="font-size: 14px;line-height: 1.5;color: #000;">Buzz</span>
+                                    <p style="font-size: 14px;color: #ccc;">Buzz</p>
+                                </div>
+                        </a>
+                </li>
+                <li>
+                        <a style="display: flex;" href="#">
+                                <div class="play">4</div>
+                                <div>
+                                    <span style="font-size: 14px;line-height: 1.5;color: #000;">Dhadak Title Track</span>
+                                    <p style="font-size: 14px;color: #ccc;">Dhadak</p>
+                                </div>
+                        </a>
+                </li>
+                <li>
+                        <a style="display: flex;" href="#">
+                                <div class="play">5</div>
+                                <div>
+                                    <span style="font-size: 14px;line-height: 1.5;color: #000;">Dilbaro</span>
+                                    <p style="font-size: 14px;color: #ccc;">Raazi</p>
+                                </div>
+                        </a>
+                </li>
+                <li>
+                        <a style="display: flex;" href="#">
+                                <div class="play">6</div>
+                                <div>
+                                    <span style="font-size: 14px;line-height: 1.5;color: #000;">O Saathi</span>
+                                    <p style="font-size: 14px;color: #ccc;">Baaghi 2</p>
+                                </div>
+                        </a>
+                </li>
+                <li>
+                        <a style="display: flex;" href="#">
+                                <div class="play">7</div>
+                                <div>
+                                    <span style="font-size: 14px;line-height: 1.5;color: #000;">Coca Cola Tu</span>
+                                    <p style="font-size: 14px;color: #ccc;">Coca Cola Tu</p>
+                                </div>
+                        </a>
+                </li>
+                <li>
+                        <a style="display: flex;" href="#">
+                                <div class="play">8</div>
+                                <div>
+                                    <span style="font-size: 14px;line-height: 1.5;color: #000;">Aaya Na Tu</span>
+                                    <p style="font-size: 14px;color: #ccc;">Aaya Na Tu</p>
+                                </div>
+                        </a>
+                </li>
+                <li>
+                        <a style="display: flex;" href="#">
+                                <div class="play">9</div>
+                                <div>
+                                    <span style="font-size: 14px;line-height: 1.5;color: #000;">Dil Diyaan Gallan</span>
+                                    <p style="font-size: 14px;color: #ccc;">Tiger Zinda Hai</p>
+                                </div>
+                        </a>
+                </li>
+                <li>
+                        <a style="display: flex;" href="#">
+                                <div class="play">10</div>
+                                <div>
+                                    <span style="font-size: 14px;line-height: 1.5;color: #000;">Dil Chori</span>
+                                    <p style="font-size: 14px;color: #ccc;">Sonu Ke Titu Ki Sweety</p>
+                                </div>
+                        </a>
+                </li>
+                <li>
+                        <a style="display: flex;" href="#">
+                                <div class="play">11</div>
+                                <div>
+                                    <span style="font-size: 14px;line-height: 1.5;color: #000;">Kar Har Maidan Fateh</span>
+                                    <p style="font-size: 14px;color: #ccc;">Sanju</p>
+                                </div>
+                        </a>
+                </li>
+                <li>
+                        <a style="display: flex;" href="#">
+                                <div class="play">12</div>
+                                <div>
+                                    <span style="font-size: 14px;line-height: 1.5;color: #000;">Veere</span>
+                                    <p style="font-size: 14px;color: #ccc;">Veere Di Wedding</p>
+                                </div>
+                        </a>
+                </li>
+            </ul>
+            <div style="padding-left: 15px">
+                <h5 style="color: #a9a9a9;font-weight: 400">Download The App</h5>
+                <button type="button" class="btn btn-success" style="background-color: #30b55a;border-radius: 8px;margin-bottom: 7px">
+                        <div style="display: flex">
+                           <div><i class="fa fa-mobile" style="font-size: 40px;padding: 7px 10px 0px 0px"></i></div>
+                           <div style="width: 145px;padding-top: 5px;padding-bottom: 3px">
+                              <p style="color: white;font-size: 12px;font-weight: 400;letter-spacing: .02em;text-align: left">
+                                  Download on the</p>
+                              <p style="font-size: 17px;font-weight: 500;text-align: left">Apple Store</p>
+                           </div>
+                        </div>
+                </button>
+                <button type="button" class="btn btn-success" style="background-color: #30b55a;border-radius: 8px;margin-bottom: 7px">
+                        <div style="display: flex">
+                           <div><i class="fa fa-mobile" style="font-size: 40px;padding: 7px 10px 0px 0px"></i></div>
+                           <div style="width: 145px;padding-top: 5px;padding-bottom: 3px">
+                              <p style="color: white;font-size: 12px;font-weight: 400;letter-spacing: .02em;text-align: left">
+                                  Get it on</p>
+                              <p style="font-size: 17px;font-weight: 500;text-align: left">Google Play</p>
+                           </div>
+                        </div>
+                </button>
+                <button type="button" class="btn btn-success" style="background-color: #30b55a;border-radius: 8px;margin-bottom: 7px">
+                        <div style="display: flex">
+                           <div><i class="fa fa-motorcycle" style="font-size: 30px;padding: 7px 10px 0px 0px"></i></div>
+                           <div style="width: 145px;padding-top: 5px;padding-bottom: 3px">
+                              <p style="color: white;font-size: 12px;font-weight: 400;letter-spacing: .02em;text-align: left">
+                                  Download from</p>
+                              <p style="font-size: 17px;font-weight: 500;text-align: left">Windows Store</p>
+                           </div>
+                        </div>
+                      </button>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+
+        <div id="centre">
+                <div>
+                    <span style="font-size: 19px;padding-top: 5px;padding-right: 5px;color: #a9a9a9;">
+                            New Releases</span>
+                    <a><button type="button" class="btn btn-success">More</button>
+                        </a>
+                </div>
+                <div id="centre_images" class="clearfix">
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                    <a class="left">
+                        <div>
+                            <img src="https://c.saavncdn.com/193/Soorma-Hindi-2018-20180702111043-150x150.jpg">
+                            <h3>Soorma</h3>
+                            <p>Shankar Ehsaan Loy</p>
+                        </div>
+                    </a>
+                </div>
+        </div>
+
+
+        <div id="right_side">
+            <div>
+                <span style="font-size: 19px;padding-top: 5px;padding-right: 5px;color: #a9a9a9;">Featured PlayLists</span>
+                <a><button type="button" class="btn btn-success">More</button>
+                </a>
+            </div>
+            <div id="right_side_images" class="clearfix">
+              <a class="left" href="#">
+                <div>
+                    <img src="https://c.saavncdn.com/editorial/SaturdaySaturday_20180406072058_150x150.jpg">
+                    <h3>Saturday Saturd..</h3>
+                    <p>12 songs</p>
+                </div>
+              </a>
+              <a class="left" href="#">
+                    <div>
+                        <img src="https://c.saavncdn.com/editorial/JhoomoRewithKailashKher_20180706182904_150x150.jpg">
+                        <h3>Jhoome Re with..</h3>
+                        <p>28 songs</p>
+                    </div>
+              </a>
+              <a class="left" href="#">
+                    <div>
+                        <img src="https://c.saavncdn.com/editorial/FreshHits_99973971_20170803_150x150.jpg">
+                        <h3>Fresh Hits</h3>
+                        <p>18 songs</p>
+                    </div>
+              </a>
+              <a class="left" href="#">
+                    <div>
+                        <img src="https://c.saavncdn.com/editorial/PrateekKuhadTheCollection_99978009_20170428_150x150.jpg">
+                        <h3>Prateek Kuhad-...</h3>
+                        <p>9 songs</p>
+                    </div>
+              </a>
+              <a class="left" href="#">
+                    <div>
+                        <img src="https://c.saavncdn.com/editorial/AtifKiAwaaz_99972547_201803131520932569227_150x150.jpg">
+                        <h3>Atif ki Awaaz</h3>
+                        <p>31 songs</p>
+                    </div>
+              </a>
+              <a class="left" href="#">
+                    <div>
+                        <img src="https://c.saavncdn.com/editorial/DanceSweatRepeat_20180629084449_150x150.jpg">
+                        <h3>Dance Sweat Re..</h3>
+                        <p>52 songs</p>
+                    </div>
+              </a>
+              <a class="left" href="#">
+                    <div>
+                        <img src="https://c.saavncdn.com/editorial/SpotlightArijitSinghhindi_20180426002159_150x150.jpg">
+                        <h3>Spotlight-Arijit..</h3>
+                        <p>30 songs</p>
+                    </div>
+              </a>
+              <a class="left" href="#">
+                    <div>
+                        <img src="https://c.saavncdn.com/editorial/NothingBut90s_99973219_20170328_150x150.jpg">
+                        <h3>Nothing But 90s</h3>
+                        <p>30 songs</p>
+                    </div>
+              </a>
+              <a class="left" href="#">
+                    <div>
+                        <img src="https://c.saavncdn.com/editorial/NothingBut90s_99973219_20170328_150x150.jpg">
+                        <h3>The Remix</h3>
+                        <p>26 songs</p>
+                    </div>
+              </a>
+              <a class="left" href="#">
+                    <div>
+                        <img src="https://c.saavncdn.com/editorial/WeeklyJukeboxRomantic_99978959_201803221521710285079_150x150.jpg">
+                        <h3>Weekly Jukebox..</h3>
+                        <p>25 songs</p>
+                    </div>
+              </a>
+              <a class="left" href="#">
+                    <div>
+                        <img src="https://c.saavncdn.com/editorial/WeeklyJukeboxWorkout_20180629085210_150x150.jpg">
+                        <h3>Weekly Jukebox..</h3>
+                        <p>25 songs</p>
+                    </div>
+              </a>
+              <a class="left" href="#">
+                    <div>
+                        <img src="https://c.saavncdn.com/editorial/FiltrLoveStories_46942458_20160331_150x150.jpg">
+                        <h3>Love Stories</h3>
+                        <p>20 songs</p>
+                    </div>
+              </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <hr style="margin: 30px 0px">
+        <a>
+            <div>
+            <i class="fa fa-thumbs-up" style="font-size: 13px;vertical-align: top;padding-left: 2px;margin-top: 2px;
+            margin-left: 2px"></i>
+            <span style="font-size: 12px;font-weight: 500;padding-bottom: 0px;vertical-align: top">Like</span>
+            </div>
+        </a>
+        <span style="vertical-align: top;color: #9a9a9a;font-size: 14px">Millions of people like saavn</span>
+        <hr style="margin: 25px 0px">
+        <div style="display: flex">
+            <div class="footer_navs">
+                <p>Top Songs</p>
+                <ul>
+                    <li>
+                        <a href="#">Hindi Songs</a>
+                    </li>
+                    <li>
+                        <a href="#">English Songs</a>
+                    </li>
+                    <li>
+                        <a href="#">Tamil Songs</a>
+                    </li>
+                    <li>
+                        <a href="#">Telegu Songs</a>
+                    </li>
+                    <li>
+                        <a href="#">Punjabi Songs</a>
+                    </li>
+                    <li>
+                        <a href="#">Gujrati Songs</a>
+                    </li>
+                    <li>
+                        <a href="#">Bengali Songs</a>
+                    </li>
+                    <li>
+                        <a href="#">Kannada Songs</a>
+                    </li>
+                    <li>
+                        <a href="#">Bhojpuri Songs</a>
+                    </li>
+                    <li>
+                        <a href="#">Urdu Songs</a>
+                    </li>    
+                </ul>
+            </div>
+            <div class="footer_navs">
+                    <p>Top Songs</p>
+                    <ul>
+                        <li>
+                            <a href="#">Hindi Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">English Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Tamil Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Telegu Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Punjabi Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Gujrati Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Bengali Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Kannada Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Bhojpuri Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Urdu Songs</a>
+                        </li>    
+                    </ul>
+            </div>
+            <div class="footer_navs">
+                        <p>Top Songs</p>
+                        <ul>
+                            <li>
+                                <a href="#">Hindi Songs</a>
+                            </li>
+                            <li>
+                                <a href="#">English Songs</a>
+                            </li>
+                            <li>
+                                <a href="#">Tamil Songs</a>
+                            </li>
+                            <li>
+                                <a href="#">Telegu Songs</a>
+                            </li>
+                            <li>
+                                <a href="#">Punjabi Songs</a>
+                            </li>
+                            <li>
+                                <a href="#">Gujrati Songs</a>
+                            </li>
+                            <li>
+                                <a href="#">Bengali Songs</a>
+                            </li>
+                            <li>
+                                <a href="#">Kannada Songs</a>
+                            </li>
+                            <li>
+                                <a href="#">Bhojpuri Songs</a>
+                            </li>
+                            <li>
+                                <a href="#">Urdu Songs</a>
+                            </li>    
+                    </ul>
+            </div>
+            <div class="footer_navs">
+                    <p>Radio</p>
+                    <ul>
+                        <li>
+                            <a href="#">Hindi Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">English Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Tamil Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Telegu Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Punjabi Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Gujrati Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Bengali Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Kannada Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Bhojpuri Songs</a>
+                        </li>
+                        <li>
+                            <a href="#">Urdu Songs</a>
+                        </li>    
+                    </ul>
+            </div>
+            <div class="footer_navs">
+                    <p>Company</p>
+                    <ul>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Culture</a>
+                        </li>
+                        <li>
+                            <a href="#">Blogs</a>
+                        </li>
+                        <li>
+                            <a href="#">Jobs</a>
+                        </li>
+                        <li>
+                            <a href="#">Press</a>
+                        </li>
+                        <li>
+                            <a href="#">Advertise</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms & Privacy</a>
+                        </li>
+                        <li>
+                            <a href="#">Help & Support</a>
+                        </li>
+                        <li>
+                            <a href="#">Artist Originals</a>
+                        </li>
+                        <li>
+                            <a href="#">Original Shows</a>
+                        </li>    
+                    </ul>
+            </div>
+            <div class="footer_navs" style="padding-left: 15px;">
+                    <p>Products</p>
+                    <ul>
+                        <li>
+                            <a href="#">Saavn Pro</a>
+                        </li>
+                        <li>
+                            <a href="#">Saavn for iOS</a>
+                        </li>
+                        <li>
+                            <a href="#">Saavn for Android</a>
+                        </li>
+                        <li>
+                            <a href="#">Saavn for Windows 10</a>
+                        </li>
+                        <hr style="margin:10px 0px;">
+                        <li>
+                            <a href="#">Find Friends</a>
+                        </li>
+                        <li>
+                            <a href="#">Browse All Albums</a>
+                        </li>
+                        <li>
+                            <a href="#">Sitemap</a>
+                        </li> 
+                    </ul>
+            </div>
+            <div class="footer_navs" style="text-align: right">
+                    <p>Follow Us Online</p>
+                    <ul>
+                        <li>
+                            <a href="#">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#">Youtube</a>
+                        </li>
+                        <li>
+                            <a href="#">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="#">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#">Google+</a>
+                        </li>    
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
